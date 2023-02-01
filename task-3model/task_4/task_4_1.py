@@ -3,7 +3,6 @@ from datetime import *
 from tkinter import *
 from tkinter.messagebox import showerror, showinfo
 
-
 age = Tk()
 age.title('P10-Age Calculator')
 age.resizable(width=False, height=False)
@@ -13,7 +12,7 @@ age_name = Label(age, text="Age calculator", foreground="red", font=30)
 age_name.place(x=150, y=10)
 label_data = Label(age, text="Day: ", bg='cyan', font=25)
 label_data.place(x=70, y=40)
-day_entry = Entry(age, width=5, font=(None, 10, 'bold') )
+day_entry = Entry(age, width=5, font=(None, 10, 'bold'))
 day_entry.place(x=150, y=40)
 
 label_month = Label(age, text="Month: ", bg='cyan', font=25)
@@ -33,13 +32,15 @@ label_name.place(x=50, y=250)
 
 
 def calculate_age():
-    if year_entry.get():
+    try:
+        year_entry.get()
         current_year = datetime.now().year
         your_age = current_year - int(year_entry.get())
         your_age = str(your_age)
         text.set(your_age)
-    else:
-        showerror(("Erorr"))
+    except:
+        showerror(("Erorr"),
+                  "\nEror fayl")
 
 
 text = tkinter.StringVar()

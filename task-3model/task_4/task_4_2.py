@@ -81,7 +81,8 @@ def day_result():
         summa = str(summa)
         text.set(summa + '$')
     except:
-        messagebox.showerror(("Erorr"))
+        messagebox.showerror(("Erorr"),
+                             "Erorr Fayl")
 
 
 day_entr = Entry(hospitel, width=5)
