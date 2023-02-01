@@ -74,12 +74,13 @@ text = tkinter.StringVar()
 
 
 def day_result():
-    if day_entr.get():
+    try:
+        day_entr.get()
         current = 200
         summa = current * int(day_entr.get())
         summa = str(summa)
         text.set(summa + '$')
-    else:
+    except:
         messagebox.showerror(("Erorr"))
 
 

@@ -2,8 +2,7 @@ import tkinter
 from datetime import *
 from tkinter import *
 from tkinter.messagebox import showerror, showinfo
-from tkcalendar import *
-import tkcalendar
+
 
 age = Tk()
 age.title('P10-Age Calculator')
@@ -33,7 +32,6 @@ label_name = Label(age, text="Your age: ", bg='yellow', font=50)
 label_name.place(x=50, y=250)
 
 
-# age_result = Label(age, text="", bg="red")
 def calculate_age():
     if year_entry.get():
         current_year = datetime.now().year
