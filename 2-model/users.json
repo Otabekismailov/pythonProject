@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "first_name": "Botirjon",
+    "username": "botir",
+    "balance": 15000,
+    "is_client": true,
+    "password": "1"
+  },
+  {
+    "id": 2,
+    "first_name": "Tohirjon",
+    "username": "tohir",
+    "balance": 15000,
+    "is_client": false,
+    "password": "123"
+  }
+]

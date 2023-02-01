@@ -1,0 +1,142 @@
+[
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Amudaryo tumaniBeruniy tumaniChimboy tumaniEllikqal'a tumaniKegeyli tumaniMo'ynoq tumaniNukus tumaniQanliko'l tumaniQo'ng'irot tumaniQorao'zak tumaniShumanay tumaniTaxtako'pir tumaniTo'rtko'l tumaniXo'jayli tumani"
+    },
+    "fields": {
+      "region": "Qoraqalpog'iston",
+      "pk": 1
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Bog'ot tumaniGurlan tumaniXonqa tumaniHazorasp tumaniXiva tumaniQo'shko'pir tumaniShovot tumaniUrganch tumaniYangiariq tumaniYangibozor tumaniTuproqqal'a tumaniXorazm shahar"
+    },
+    "fields": {
+      "region": "Xorazm",
+      "pk": 2
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Konimex tumaniKarmana tumaniQiziltepa tumaniXatircha tumaniNavbahor tumaniNurota tumaniTomdi tumaniUchquruq tumaniNavoiy  shahar"
+    },
+    "fields": {
+      "region": "Navoiy",
+      "pk": 3
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Olot tumaniBuxoro tumaniG'ijduvon tumaniJondor tumaniKogon tumaniQorako'l tumaniQorovulbozor tumaniPeshku tumaniPomitan tumaniShofirkon tumaniVobkent tumaniBuxoro shahar"
+    },
+    "fields": {
+      "region": "Buxoro",
+      "pk": 4
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Bulung'ur tumaniIshtixon tumaniJomboy tumaniKattaqo'rg'on tumaniQo'shrabot tumaniNarpay tumaniNurobot tumaniOqdaryo tumaniPaxtachi tumaniPayariq tumaniPastdarg'om tumaniSamarqand tumaniToyloq tumaniUrgut tumaniSamarqand shahar"
+    },
+    "fields": {
+      "region": "Samarqand",
+      "pk": 5
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Chiroqchi tumaniDehqonobod tumaniG'uzor tumaniQamashi tumaniQarshi tumaniKoson tumaniKasbi tumaniKitob tumaniMirishkor tumaniMuborak tumaniNishon tumaniShahrisabz tumaniYakkabog' tumaniQashqadaryo shahar"
+    },
+    "fields": {
+      "region": "Qashqadaryo",
+      "pk": 6
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Angor tumaniBoysun tumaniDenov tumaniJarqo'rg'on tumaniQiziriq tumaniQumqo'rg'on tumaniMuzrabot tumaniOltinsoy tumaniSariosiyo tumaniSherobod tumaniSho'rchi tumaniTermiz tumaniUzun tumani"
+    },
+    "fields": {
+      "region": "Surxondaryo",
+      "pk": 7
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Arnasoy tumaniBaxmal tumaniDo'stlik tumaniForish tumaniG'allaorol tumaniSharof Rashidov tumaniMirzacho'l tumaniPaxtakor tumaniYangiobod tumaniZomin tumaniZafarobod tumaniZarbdor tumaniJizzax shaharSurxondaryo shahar"
+    },
+    "fields": {
+      "region": "Jizzax",
+      "pk": 8
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Oqoltin tumaniBoyovut tumaniGuliston tumaniXovos tumaniMirzaobod tumaniSayxunobod tumaniSardoba tumaniSirdaryo tumaniSirdaryo shahar"
+    },
+    "fields": {
+      "region": "Sirdaryo",
+      "pk": 9
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Bekobod tumaniBo'tonliq tumaniBo'ka tumaniChinoz tumaniQibray tumaniOhangaron tumaniOqqo'rg'on tumaniParkent tumaniPiskent tumaniQuyi chirchiq tumaniO'rta chirchiq tumaniYangiyo'l tumaniYuqori chirchiq tumaniZangiorta tumani"
+    },
+    "fields": {
+      "region": "Toshkent viloyati",
+      "pk": 10
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Chortoq tumaniChust tumaniKosonsoy tumaniMingbuloq tumaniNamangan tumaniNorin tumani (Ozbekiston)Pop tumaniTo'raqo'rg'on tumaniUchqo'rg'on tumaniUychi tumaniYangiqo'rg'on tumaniNamangan shahar"
+    },
+    "fields": {
+      "region": "Namangan",
+      "pk": 11
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Oltiariq tumaniBag'dod tumaniBeshariq tumaniBuvayda tumaniDang'ara tumaniFarg'ona tumaniFurqat tumaniQo'shtepa tumaniQuva tumaniRishton tumaniSo'x tumaniToshloq tumaniUchko'prik tumaniO'zbekiston tumaniYozyovon tumaniQuvasoy tumaniFarg'ona shahar"
+    },
+    "fields": {
+      "region": "Farg'ona",
+      "pk": 12
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Andijon tumaniAsaka tumaniBaliqchi tumaniBo'z tumaniBuloqboshi tumaniIzboskan tumaniJalaquduq tumaniXo'laobod tumaniQo'rg'ontepa tumaniMarhamat tumaniOltinko'l tumaniPaxtaobod tumaniShahrixon tumaniUlug'nor tumaniAndijon shahar"
+    },
+    "fields": {
+      "region": "Andijon",
+      "pk": 13
+    }
+  },
+  {
+    "data": {
+      "object": "apps.adverts.region",
+      "districts": "Bektemir tumaniChilonzor tumaniHamza tumaniMirobod tumaniMirzi Ulug'bek tumaniSergili tumaniShayhontohur tumaniOlmazor tumaniUchtepa tumaniYakkasaroy tumaniYunusobod tumani"
+    },
+    "fields": {
+      "region": "Toshkent shahar",
+      "pk": 14
+    }
+  }
+]
