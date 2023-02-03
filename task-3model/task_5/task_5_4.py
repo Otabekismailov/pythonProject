@@ -24,7 +24,7 @@ window.title("YuTube DownLoaD")
 window.geometry("600x200")
 window.configure(bg='red')
 
-sayt_label = Label(text="Sayt Nomini Kiritng -->")
+sayt_label = Label(text="Video Linkini Kiritng -->")
 sayt_label.place(x=10, y=10)
 sayt_label.configure(font=1, background='red')
 
