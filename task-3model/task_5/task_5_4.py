@@ -12,7 +12,7 @@ def video_download():
         video.download(save_combo.get())
 
         messagebox.showinfo("Downloan\n", "\nVideo Downloand"
-                                          f"\nShu Pakada{save_combo.get()}")
+                                          f"\nShu Papkada --> {save_combo.get()}")
 
     except:
         messagebox.showerror("Erorr\n", "\nXatolik yuz berdi\n"
