@@ -23,14 +23,7 @@ trans_text.place(x=550, y=50)
 trans_label = Label(trans, text="Tilni Tanlang", bg="red", font=20)
 trans_label.place(x=0, y=320)
 
-file_path = "./Translator"
-
-
-def get_prev_task_id():
-    with open(file_path) as f:
-        csv_reader = csv.DictReader(f)
-        return int([row for row in csv_reader][-1].get("id"))
-
+file_path = "Translator.csv"
 
 def perevochik_text():
     trans_text.delete(1.0, END)
@@ -48,13 +41,12 @@ def perevochik_text():
         task = Task(orginal_language=words, tarns_language=wordst, created_at=datetime.now())
         with open(file_path, "a+", newline="\n") as f:
             data = task.get_attrs_as_dict()
-            header = ["id", "orginal_language", "created_at", "tarns_language"]
+            header = ["orginal_language", "created_at", "tarns_language"]
             dict_writer = csv.DictWriter(f, header)
             if os.path.getsize(file_path) == 0:
                 dict_writer.writeheader()
-                data.update({"id": 1})
-            data.update({"id": get_prev_task_id() + 1})
             dict_writer.writerow(data)
+
 
     except:
         messagebox.showerror("Erorr", "\nSo'z topilmadi"
