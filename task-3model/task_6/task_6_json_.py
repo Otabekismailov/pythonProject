@@ -1,21 +1,22 @@
-import json
 import requests
-from tkinter import Tk, Frame, Text, Label, END, Button
-import textblob
-from tkinter import ttk, messagebox
 
 kurs = {}
 
 
 def get_exchange_rate():
-    url = f'https://api.freecurrencyapi.com/v1/latest?apikey=XXdZcMz6fXSDKcG5wOBydY804DH0mx64Amh2Koqu'
+    url = 'https://v6.exchangerate-api.com/v6/11703d1b314f811793cbdfd9/latest/USD'
     response = requests.get(url)
-    res = json.loads(response.text)
-    kurs.update(res['data'])
-    print(kurs)
+    res = response.json()
+    res = dict(res)
+    kurs.update(res['conversion_rates'])
 
 
 get_exchange_rate()
+
+from tkinter import *
+import textblob
+from tkinter import ttk, messagebox
+
 kurs_conver = Tk()
 kurs_conver.title("P10_Kurs -> Conver")
 
@@ -40,6 +41,7 @@ def conver_text():
     resulta2 = ""
     try:
         trans_text.delete(1.0, END)
+        # if original_combo in "".isalpha() and trans_combo in "".isalpha():
         for key, valu in conver_dik.items():
             if key == original_combo.get():
                 resulta1 += key
@@ -48,13 +50,17 @@ def conver_text():
             if key == trans_combo.get():
                 res2 = valu
                 resulta2 += key
+
         words = textblob.TextBlob(original_text.get(1.0, END))
         words = str(words)
-        res3 = float(res2) / float(res1) * int(words)
+        res3 = float(words) * float(res2)
         trans_text.insert(1.0, str(res3), END)
 
         messagebox.showinfo("Converter!", f"Tanlangan Valutani,Nomi {resulta1} Miqdori --> {words}"
                                           f"Tanlangan Valuta ,Nomi  {resulta2}  Miqdori --> {res3}")
+    # else:
+    #     messagebox.showerror("Erorr", "\nIltimos Valutani"
+    #                                   "\nKiriting!")
 
     except:
         messagebox.showerror("Erorr", "\nXatolik Yuz Berdi"
@@ -67,19 +73,18 @@ def clear():
 
 
 conver_dik = kurs
-list_convert1 = list(kurs.keys())
+conver_list = list(kurs.keys())
 
-button_trans = Button(kurs_conver, text="<<<Converter>>>!", width=20, bg="red", font=30, command=conver_text)
+button_trans = Button(kurs_conver, text="<<<Converter>>>!", width=20, bg="red", font=30, command=conver_text, )
 button_trans.place(x=280, y=150)
 
-original_combo = ttk.Combobox(kurs_conver, width=20, values=list_convert1)
-
+original_combo = ttk.Combobox(kurs_conver, width=20, values=conver_list)
 original_combo.place(x=0, y=350)
 
 trans_label1 = Label(kurs_conver, text="Qaysi_Valutaga,Tanlang", bg="red", font=20, )
 trans_label1.place(x=600, y=320)
 
-trans_combo = ttk.Combobox(kurs_conver, width=20, values=list_convert1)
+trans_combo = ttk.Combobox(kurs_conver, width=20, values=conver_list)
 trans_combo.place(x=620, y=350)
 
 orta_label = Label(kurs_conver, text="------>", bg="yellow", font=100)
@@ -88,5 +93,5 @@ orta_label.place(x=280, y=350)
 cler_button = Button(kurs_conver, text="Clear", bg="red", font=60, command=clear)
 cler_button.place(x=350, y=350)
 
-if __name__ == "__main__":
+if __name__ == ("__main__"):
     kurs_conver.mainloop()
