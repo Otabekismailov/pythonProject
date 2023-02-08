@@ -1,3 +1,5 @@
 .new_env
 .venv
 .idea
+env1
+__init__.py

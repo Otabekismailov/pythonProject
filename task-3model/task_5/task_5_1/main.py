@@ -2,7 +2,8 @@ import csv
 import os.path
 import tkinter as tk
 from datetime import datetime
-
+from tkinter import Text
+import textblob
 from task import Task
 from messages import TASK_NAME_LABEL, ADD_BTN
 
@@ -24,12 +25,8 @@ def get_prev_task_id():
 def get_tasks():
     with open(file_path) as f:
         csv_reader = csv.DictReader(f)
-        data = [list(row.values()) for row in csv_reader]
-        for i in range(0, len(data)):
-            for j in range(4):
-                row = tk.Label(window, text=data[i][j])
-                row.grid(row=i + 1, sticky='w', column=j, pady=2)
-
+        data = [row for row in csv_reader]
+        print(data)
 
 def add():
     task = Task(name=task_entry.get(), created_at=datetime.now())
@@ -51,6 +48,9 @@ def add():
 
 task_name = tk.Label(window, text=TASK_NAME_LABEL)
 task_name.grid(row=0, column=0)
+
+
+text_label=tk.Label()
 
 task_entry = tk.Entry(window, width=15)
 task_entry.grid(row=0, column=1)
