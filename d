@@ -1,0 +1,16 @@
+user.email=orifisamilov12@mail.ru
+user.name=Ismail0v12
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/Otabekismailov/pythonProject.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+branch.new.remote=origin
+branch.new.merge=refs/heads/new
+user.email=15ismailov1995@gmail.com
+user.name=Otabekismailov
