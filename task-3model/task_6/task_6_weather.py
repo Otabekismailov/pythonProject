@@ -87,17 +87,17 @@ def time2():
     weather_temperatureAvg.configure(
         text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['average_temperature'])
     if WeatherManager(weather_entery.get()).get_daily_temperature()[0]['day'].endswith(day1):
-        weather_data2.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['day'])
+        weather_data2.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['day'])
         weather_temperatureAvg2.configure(
-            text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['average_temperature'])
-    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[1]['hours']:
+            text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['average_temperature'])
+    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[0]['hours']:
         if i.get('time') <= datetime.now().strftime("%H:%M"):
             weather_temp2.configure(text=i.get('temperature'))
             weather_time2.configure(text=i.get('time'))
         if i.get('time') >= datetime.now().strftime("%H:%M"):
             weather_time3.configure(text=i.get('time'))
             weather_temp3.configure(text=i.get('temperature'))
-    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[2]['hours']:
+    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[0]['hours']:
         if i.get('time') <= day2:
             weather_temp5.configure(text=i.get('temperature'))
             weather_time5.configure(text=i.get('time'))
