@@ -9,11 +9,11 @@ import requests
 
 
 class WeatherManager:
-    # API_KEY = 'ZQ48KUlOHW4H7bnsvgNlF02Z06kwKvoB'
+    API_KEY = 'ZQ48KUlOHW4H7bnsvgNlF02Z06kwKvoB'
 
     # API_KEY = 'hXhEWejPhlsDzrFaVzeJd2GvTQcIagIE'
 
-    API_KEY = 'AFKoBhI9HsbH6BnLsddIqu8xAoT1T5RC'
+    # API_KEY = 'AFKoBhI9HsbH6BnLsddIqu8xAoT1T5RC'
 
     def __init__(self, city):
         self.city = city
@@ -78,19 +78,33 @@ class WeatherManager:
 
 
 # # print(WeatherManager('tashkent').get_daily_temperature())
-#
-#
+
+
 def time2():
+    res = datetime.now().day + 1
+    day1 = datetime.now().replace(day=res).strftime("%Y.%m.%d")
+    day2 = datetime.now().replace(day=res).strftime("%H:%M")
     weather_data.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['day'])
     weather_temperatureAvg.configure(
         text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['average_temperature'])
+    if WeatherManager(weather_entery.get()).get_daily_temperature()[0]['day'].endswith(day1):
+        weather_data2.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['day'])
+        weather_temperatureAvg2.configure(
+            text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['average_temperature'])
     for i in WeatherManager(weather_entery.get()).get_daily_temperature()[0]['hours']:
         if i.get('time') <= datetime.now().strftime("%H:%M"):
             weather_temp2.configure(text=i.get('temperature'))
             weather_time2.configure(text=i.get('time'))
         if i.get('time') >= datetime.now().strftime("%H:%M"):
-            weather_temp3.configure(text=i.get('temperature'))
             weather_time3.configure(text=i.get('time'))
+            weather_temp3.configure(text=i.get('temperature'))
+    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[1]['hours']:
+        if i.get('time') <= day2:
+            weather_temp5.configure(text=i.get('temperature'))
+            weather_time5.configure(text=i.get('time'))
+        if i.get('time') >= day2:
+            weather_temp6.configure(text=i.get('temperature'))
+            weather_time6.configure(text=i.get('time'))
 
 
 weather = tkinter.Tk()
@@ -131,6 +145,33 @@ weather_temp2.place(x=160, y=150)
 
 weather_temp3 = Label(weather, text="", bg='red')
 weather_temp3.place(x=220, y=150)
+
+weather_data2 = Label(weather, text="", bg="red", font=20)
+weather_data2.place(x=100, y=190)
+
+weather_tempertura_label2 = Label(weather, text="O'rtacha harorat:", font=40)
+weather_tempertura_label2.place(x=250, y=190)
+
+weather_temperatureAvg2 = Label(weather, text="", bg="red", font=20)
+weather_temperatureAvg2.place(x=400, y=190)
+
+weather_time4 = Label(weather, text="VAQT:", bg="red")
+weather_time4.place(x=100, y=220)
+
+weather_time5 = Label(weather, text="", bg='red')
+weather_time5.place(x=160, y=220)
+weather_time6 = Label(weather, text="", bg='red')
+weather_time6.place(x=220, y=220)
+
+weather_temp4 = Label(weather, text="Harorat:", bg="red")
+weather_temp4.place(x=100, y=250)
+
+weather_temp5 = Label(weather, text="", bg="red")
+weather_temp5.place(x=160, y=250)
+
+weather_temp6 = Label(weather, text="", bg='red')
+weather_temp6.place(x=220, y=250)
+
 weather_entery = Entry(weather, width=20, font=20)
 weather_entery.place(x=300, y=50)
 
