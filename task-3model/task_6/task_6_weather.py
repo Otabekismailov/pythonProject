@@ -1,5 +1,5 @@
 import csv
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import json
 import time
@@ -81,30 +81,39 @@ class WeatherManager:
 
 
 def time2():
-    res = datetime.now().day + 1
-    day1 = datetime.now().replace(day=res).strftime("%Y.%m.%d")
-    day2 = datetime.now().replace(day=res).strftime("%H:%M")
-    weather_data.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['day'])
-    weather_temperatureAvg.configure(
-        text=WeatherManager(weather_entery.get()).get_daily_temperature()[0]['average_temperature'])
-    if WeatherManager(weather_entery.get()).get_daily_temperature()[0]['day'].endswith(day1):
-        weather_data2.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['day'])
-        weather_temperatureAvg2.configure(
-            text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['average_temperature'])
-    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[0]['hours']:
-        if i.get('time') <= datetime.now().strftime("%H:%M"):
-            weather_temp2.configure(text=i.get('temperature'))
-            weather_time2.configure(text=i.get('time'))
-        if i.get('time') >= datetime.now().strftime("%H:%M"):
-            weather_time3.configure(text=i.get('time'))
-            weather_temp3.configure(text=i.get('temperature'))
-    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[1]['hours']:
-        if i.get('time') <= day2:
-            weather_temp5.configure(text=i.get('temperature'))
-            weather_time5.configure(text=i.get('time'))
-        if i.get('time') >= day2:
-            weather_temp6.configure(text=i.get('temperature'))
-            weather_time6.configure(text=i.get('time'))
+    day2 = datetime.now() + timedelta(days=1)
+    time2 = datetime.strptime(day2.time().strftime("%H:%M"), "%H:%M")
+    day1 = datetime.now()
+    time1 = datetime.strptime(day1.time().strftime("%H:%M"), "%H:%M")
+    weather_res = WeatherManager(weather_entery.get()).get_daily_temperature()
+    for row in weather_res:
+        data_day = datetime.strptime(row.get('day'), "%Y.%m.%d")
+        # data_time = datetime.strptime(row["hours"][0]['time'], "%H:%M")
+        data_time1 = row["hours"]
+        if data_day.date() == day1.date():
+            weather_data.configure(text=row.get('day'))
+            weather_temperatureAvg.configure(
+                text=row.get('average_temperature'))
+        if data_day.date() == day2.date():
+            weather_data2.configure(text=row.get('day'))
+            weather_temperatureAvg2.configure(text=row.get('average_temperature'))
+        for time in data_time1:
+            data_time = datetime.strptime(time['time'], "%H:%M")
+            if data_time.time() >= time1.time():
+                weather_time2.configure(text=time.get('time'))
+                weather_temp2.configure(text=time.get('temperature'))
+
+            if data_time.time() <= time1.time():
+                weather_time3.configure(text=time.get('time'))
+                weather_temp3.configure(text=time.get('temperature'))
+
+            if data_time.time() >= time2.time():
+                weather_time5.configure(text=time.get('time'))
+                weather_temp5.configure(text=time.get('temperature'))
+
+            if data_time.time() <= time2.time():
+                weather_time6.configure(text=time.get('time'))
+                weather_temp6.configure(text=time.get('temperature'))
 
 
 weather = tkinter.Tk()
