@@ -1,8 +1,7 @@
-import csv
 from datetime import datetime
+
 import json
-import json
-import time
+
 import tkinter
 from tkinter import Label, Entry, Button, Text, END, ttk
 import requests
@@ -91,14 +90,14 @@ def time2():
         weather_data2.configure(text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['day'])
         weather_temperatureAvg2.configure(
             text=WeatherManager(weather_entery.get()).get_daily_temperature()[1]['average_temperature'])
-    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[0]['hours']:
+    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[1]['hours']:
         if i.get('time') <= datetime.now().strftime("%H:%M"):
             weather_temp2.configure(text=i.get('temperature'))
             weather_time2.configure(text=i.get('time'))
         if i.get('time') >= datetime.now().strftime("%H:%M"):
             weather_time3.configure(text=i.get('time'))
             weather_temp3.configure(text=i.get('temperature'))
-    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[1]['hours']:
+    for i in WeatherManager(weather_entery.get()).get_daily_temperature()[2]['hours']:
         if i.get('time') <= day2:
             weather_temp5.configure(text=i.get('temperature'))
             weather_time5.configure(text=i.get('time'))
