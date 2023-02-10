@@ -4,7 +4,7 @@ from telebot.types import BotCommand
 import telebot
 
 # P10_telgram_bot_Task_8
-BOT_TOKEN = "6299474557:AAHuXfxGhNzhpJJ_GggTCaiNVu8OGc7NfFc"
+BOT_TOKEN = ""
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
