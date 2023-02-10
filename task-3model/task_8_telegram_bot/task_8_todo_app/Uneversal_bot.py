@@ -10,7 +10,7 @@ import telebot
 from weather_func import WeatherManager
 
 #
-BOT_TOKEN = "6298984262:AAHoLF-7c6hPzx1VxzRXC12AOI7N1WjCuQg"
+BOT_TOKEN = ""
 
 bot = telebot.TeleBot(BOT_TOKEN)
 language = LANGUAGES
