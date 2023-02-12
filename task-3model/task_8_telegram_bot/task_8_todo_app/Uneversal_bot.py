@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 from Krili_Uzbek import to_cyrillic, to_latin
 from telebot.types import BotCommand
-from googletrans import Translator, LANGUAGES
+from googletrans import LANGUAGES
 from googletrans import *
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 import telebot

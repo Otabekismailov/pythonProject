@@ -1,5 +1,4 @@
-.new_env
-.venv
+venv
 .idea
-env1
+env
 __init__.py

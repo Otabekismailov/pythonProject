@@ -1,11 +1,6 @@
-import csv
-from datetime import datetime, timedelta
-from telebot.types import ReplyKeyboardMarkup, KeyboardButton
+
+from datetime import datetime
 import json
-import json
-import time
-import tkinter
-from tkinter import Label, Entry, Button, Text, END, ttk
 import requests
 
 
