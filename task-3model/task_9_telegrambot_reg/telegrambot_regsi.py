@@ -159,11 +159,12 @@ def add_user_info(call):
 
         bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id,
                               text="Ma'lumot qabul qilindi")
-    # bot.delete_state(call.from_user.id, call.message.chat.id)
 
-    else:
+
+    elif call.data == "bnt2":
         bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id,
                               text="Qayta Urinib Ko'ring /register")
+    bot.delete_state(call.from_user.id, call.message.chat.id)
 
 
 # bot.delete_state(call.from_user.id, call.message.chat.id)
