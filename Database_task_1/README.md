@@ -271,7 +271,7 @@ WHERE ship_region is not null
 <pre>
 #Task-26,Orders jadvaldan order_id 10300 va 10400 orasida bo’lgan ma’lumotlarni qaytaring
 javob:
-```sql
+```
 SELECT *
 FROM orders
 WHERE order_id between '10300' and '10400'
