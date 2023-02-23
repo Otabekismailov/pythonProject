@@ -1,6 +1,6 @@
 <pre>
 #task-1,Categories jadval barcha ustun ma’lumotlarini bilan qaytaring.
-</pre>
+
 #javob:
 '''sql
 SELECT * FROM categories
@@ -247,5 +247,6 @@ javob:
 SELECT count(unit_price)
 FROM order_details
 '''
-![img_28.png](img_28.png);
+![img_28.png](img_28.png)
+</pre>
 
