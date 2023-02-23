@@ -1,4 +1,5 @@
-####task-1,Categories jadval barcha ustun ma’lumotlarini bilan qaytaring.
+&nbsp;
+*task-1,Categories jadval barcha ustun ma’lumotlarini bilan qaytaring.
 #javob:
 '''sql
 SELECT * FROM categories
