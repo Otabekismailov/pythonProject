@@ -261,26 +261,26 @@ WHERE order_date between '1996-01-01'and '1996-12-31'
 <pre>
 #Task-25,Orders jadvaldan ship_region ustun NULL bo’lmagan ma’lumotlarni qaytaring.
 javob:
-'''sql
+```sql
 SELECT *
 FROM orders
 WHERE ship_region is not null
-'''
+``
 </pre>
 ![img_25.png](img_25.png)
 <pre>
 #Task-26,Orders jadvaldan order_id 10300 va 10400 orasida bo’lgan ma’lumotlarni qaytaring
 javob:
-'''sql
+```sql
 SELECT *
 FROM orders
 WHERE order_id between '10300' and '10400'
-'''
+```
 </pre>
 ![img_26.png](img_26.png)
 ![img_27.png](img_27.png)
 <pre>
-#Task-27, Order Details jadvaldan unit_price ustun umumiy qiymatini qaytaring.
+# Task-27, Order Details jadvaldan unit_price ustun umumiy qiymatini qaytaring.
 javob:
 '''sql
 SELECT count(unit_price)
