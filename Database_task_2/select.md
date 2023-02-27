@@ -317,6 +317,6 @@ where emp_lname = 'Snares';
 ```sql
 SELECT *
 FROM emp_details
-ept = 5
+ept = 57
 ```
 <img src="./pictures/Снимок экрана от 2023-02-26 16-27-51.png">
