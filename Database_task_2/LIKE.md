@@ -16,7 +16,7 @@ from salesman
 where city not in ('Paris', 'Rome');
 ```
 
-![pictures](./pictures/Снимок экрана от 2023-02-26 19-17-17.png)
+![picture](./pictures/Снимок экрана от 2023-02-26 19-17-17.png)
 
 # TASK 4
 
