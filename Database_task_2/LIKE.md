@@ -6,7 +6,7 @@ from salesman
 where city in ('Paris', 'Rome');
 ```
 
-![pictures](./pictures/Снимок экрана от 2023-02-26 19-13-43.png?raw=true)
+![pictures](https://github.com/Otabekismailov/pythonProject/tree/main/Database_task_2/picture/Снимок экрана от 2023-02-26 19-13-43.png?raw=true)
 
 # TASK 3
 
